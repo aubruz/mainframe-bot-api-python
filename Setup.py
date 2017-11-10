@@ -4,7 +4,7 @@ from setuptools import find_packages
 
 setup(
     name="mainframe-bot-api",
-    version="1.1.1",
+    version="1.1.2",
     author="aubruz",
     author_email="aubruz@hotmail.com",
     packages=find_packages(),
