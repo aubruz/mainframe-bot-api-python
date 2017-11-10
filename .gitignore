@@ -1,0 +1,64 @@
+### PHPStorm ###
+/.idea
+/vendor
+
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+### Django ###
+*.log
+*.pot
+__pycache__/
+local_settings.py
+db.sqlite3
+media
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
