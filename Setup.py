@@ -4,16 +4,17 @@ from setuptools import find_packages
 
 setup(
     name="mainframe-bot-api",
-    version="1.0.0",
+    version="1.0.1",
     author="aubruz",
+    author_email="aubruz@hotmail.com",
     packages=find_packages(),
+    install_requires=['requests', 'simplejson'],
+    python_requires='>=2.6, !=3.0.*, !=3.1.*, !=3.2.*, <4',
     url="https://github.com/aubruz/mainframe-api-python",
     license="MIT License",
     description="Communicate easily with Mainframe API",
-    long_description='Mainframe API includes a Client to make calls easily, '
-                     'responses objects and a complete set of UI components to '
-                     'build forms, dialogs and messages.',
-    zip_false=False,
+    long_description='Mainframe API includes a Client to make calls easily, responses objects and a complete set of '
+                     'UI components to build forms, dialogs and messages.',
     keywords='mainframe bot api',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
