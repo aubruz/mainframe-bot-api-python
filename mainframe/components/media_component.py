@@ -1,4 +1,4 @@
-from components.child_component import ChildComponent
+from mainframe.components.child_component import ChildComponent
 
 
 class Image(ChildComponent):

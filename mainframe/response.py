@@ -1,4 +1,4 @@
-from bot.mainframe.array_type import ArrayType
+from mainframe.array_type import ArrayType
 
 
 class UIPayload(ArrayType):

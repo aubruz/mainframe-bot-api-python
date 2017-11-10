@@ -1,13 +1,16 @@
-from client import Client
-from array_type import ArrayType
-from response import BotResponse, AuthenticationData, EmbedData, UIPayload, ModalData
-from components.component import Component
-from components.child_component import ChildComponent
-from components.button_component import UIButton, ModalButton, MessageButton, MenuButton
-from components.text_component import Text, TextButton, TextHighlight, TextInput, TextLink, TextStyle, TextSubtle
-from components.root_component import RootComponent, Form, Dialog, TextMessage, Message
-from components.form_component import ListItem, ListComponent, RadioButtonSelect, Dropdown, CheckboxItem, CheckboxGroup, MultiSelect
-from components.media_component import MediaItem, MediaGallery, Image, IconTextGroup, LinkPreview, VideoLinkPreview, Author, AvatarList
+from mainframe.client import Client
+from mainframe.array_type import ArrayType
+from mainframe.response import BotResponse, AuthenticationData, EmbedData, UIPayload, ModalData
+from mainframe.components.component import Component
+from mainframe.components.child_component import ChildComponent
+from mainframe.components.button_component import UIButton, ModalButton, MessageButton, MenuButton
+from mainframe.components.text_component import (Text, TextButton, TextHighlight, TextInput,
+                                                 TextLink, TextStyle, TextSubtle)
+from mainframe.components.root_component import RootComponent, Form, Dialog, TextMessage, Message
+from mainframe.components.form_component import (ListItem, ListComponent, RadioButtonSelect, Dropdown,
+                                                 CheckboxItem, CheckboxGroup, MultiSelect)
+from mainframe.components.media_component import (MediaItem, MediaGallery, Image, IconTextGroup, LinkPreview,
+                                                  VideoLinkPreview, Author, AvatarList)
 
 __all__ = [
     'Client', 'ArrayType', 'AuthenticationData', 'BotResponse',

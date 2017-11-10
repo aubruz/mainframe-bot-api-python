@@ -1,4 +1,4 @@
-from components.component import Component
+from mainframe.components.component import Component
 
 
 class RootComponent(Component):
