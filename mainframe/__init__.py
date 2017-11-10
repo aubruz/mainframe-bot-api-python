@@ -14,12 +14,13 @@ from mainframe.components.media_component import (MediaItem, MediaGallery, Image
 
 __all__ = [
     'Client', 'ArrayType', 'AuthenticationData', 'BotResponse',
-    'UIPayload', 'ModalData', 'EmbedData', 'UIButton', 'Image'
+    'UIPayload', 'ModalData', 'EmbedData', 'UIButton', 'Image',
     'RootComponent', 'ChildComponent', 'Component', 'MenuButton',
     'MessageButton', 'Message', 'Text', 'TextSubtle', 'TextStyle',
     'TextLink', 'TextInput', 'TextHighlight', 'TextButton', 'ListItem'
     'TextMessage', 'AvatarList', 'Author', 'MediaGallery', 'MediaItem',
     'ModalButton', 'VideoLinkPreview', 'LinkPreview', 'CheckboxGroup',
     'CheckboxItem', 'ListComponent', 'IconTextGroup', 'MultiSelect',
-    'RadioButtonSelect', 'Form', 'Dialog', 'Dropdown', 'ListItem'
+    'RadioButtonSelect', 'Form', 'Dialog', 'Dropdown', 'ListItem',
+    'TextMessage'
 ]
