@@ -1,4 +1,4 @@
-from bot.mainframe.components.component import Component
+from components.component import Component
 
 
 class ChildComponent(Component):

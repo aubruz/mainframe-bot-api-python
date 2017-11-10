@@ -1,4 +1,4 @@
-from bot.mainframe.array_type import ArrayType
+from array_type import ArrayType
 
 
 class Component(ArrayType):
