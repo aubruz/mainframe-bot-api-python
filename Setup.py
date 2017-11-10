@@ -3,7 +3,7 @@ from distutils.core import setup
 from setuptools import find_packages
 
 setup(
-    name="mainframe-api",
+    name="mainframe-bot-api",
     version="1.0.0",
     author="aubruz",
     packages=find_packages(),
@@ -13,5 +13,6 @@ setup(
     long_description='Mainframe API includes a Client to make calls easily, '
                      'responses objects and a complete set of UI components to '
                      'build forms, dialogs and messages.',
-    zip_false=False
+    zip_false=False,
+    keywords='mainframe bot api',
 )
