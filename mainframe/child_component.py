@@ -1,4 +1,4 @@
-from mainframe.components.component import Component
+from mainframe.component import Component
 
 
 class ChildComponent(Component):

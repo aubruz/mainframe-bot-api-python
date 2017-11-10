@@ -1,4 +1,4 @@
-from mainframe.components.child_component import ChildComponent
+from mainframe.child_component import ChildComponent
 
 
 class Text(ChildComponent):
