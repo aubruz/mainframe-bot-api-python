@@ -137,7 +137,7 @@ class MultiSelect(ChildComponent):
 
 
 class RadioButtonSelect(ChildComponent):
-    def __init__(self, radio_button_id, button_title):
+    def __init__(self, radio_button_id, button_title=''):
         super().__init__()
         self._set_type("RadioButtonSelect")
         self._add_props({

@@ -35,6 +35,8 @@ class Component(ArrayType):
                 for key, value in property_value.items():
                     self.json['props'][property_key][key] = value
             else:
+                if self.json.get('props') is None:
+                    self.json['props'] = {}
                 self.json['props'][property_key] = property_value
 
         return self
