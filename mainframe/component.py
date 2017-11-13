@@ -31,8 +31,8 @@ class Component(ArrayType):
         for property_key, property_value in props:
             if append:
                 self.json['props'][property_key].append(property_value)
-            elif isinstance(property_value, list) and len(property_value):
-                for key, value in property_value:
+            elif isinstance(property_value, dict) and len(property_value):
+                for key, value in property_value.items():
                     self.json['props'][property_key][key] = value
             else:
                 self.json['props'][property_key] = property_value
@@ -48,3 +48,5 @@ class Component(ArrayType):
                 self._add_props({'children': component.get()})
             else:
                 self._add_props({'children': component})
+
+        return self

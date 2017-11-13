@@ -40,8 +40,8 @@ class Dropdown(ChildComponent):
     def add_options(self, options):
         if isinstance(options, str):
             return self._add_props({"options": options}, True)
-        elif isinstance(options, list):
-            for key, value in options:
+        elif isinstance(options, dict):
+            for key, value in options.items():
                 self._add_props({
                     "options": {
                         "label": value,
@@ -126,8 +126,8 @@ class MultiSelect(ChildComponent):
     def add_options(self, options):
         if isinstance(options, str):
             return self._add_props({"options": options}, True)
-        elif isinstance(options, list):
-            for key, value in options:
+        elif isinstance(options, dict):
+            for key, value in options.items():
                 self._add_props({
                     "options": {
                         "label": value,
@@ -149,8 +149,8 @@ class RadioButtonSelect(ChildComponent):
     def add_options(self, options):
         if isinstance(options, str):
             return self._add_props({"options": options}, True)
-        elif isinstance(options, list):
-            for key, value in options:
+        elif isinstance(options, dict):
+            for key, value in options.items():
                 self._add_props({
                     "options": {
                         "label": value,

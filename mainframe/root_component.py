@@ -18,7 +18,7 @@ class Form(RootComponent):
         return self._add_props({'payload': payload})
 
     def add_data(self, key, value):
-        self._add_props({'data': {key: value}})
+        return self._add_props({'data': {key: value}})
 
 
 class Message(RootComponent):
