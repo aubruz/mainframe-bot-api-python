@@ -42,7 +42,7 @@ class Component(ArrayType):
     def _get_prop(self, prop):
         return self.json.get(prop)
 
-    def _add_children(self, component):
+    def add_children(self, component):
         if self.can_have_children:
             if isinstance(component, Component):
                 self._add_props({'children': component.get()})

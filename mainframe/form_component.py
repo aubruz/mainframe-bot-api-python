@@ -82,7 +82,7 @@ class ListItem(ChildComponent):
         #if(component instanceof Author || component instanceof AvatarList || component instanceof LinkPreview ||
         #    component instanceof IconTextGroup || component instanceof Image || component instanceof Text ||
         #     component instanceof VideoLinkPreview) {
-        return self._add_children(component.get())
+        return self.add_children(component.get())
         #throw new UIException("The childs of a ListItem must be an instance of Author, AvatarList, IconTextGroup, Image, LinkPreview, Text or VideoLinkPreview!")
 
 
@@ -93,7 +93,7 @@ class ListComponent(ChildComponent):
         self._must_have_children()
 
     def add_children(self, list_item: ListItem):
-        return self._add_children(list_item.get())
+        return self.add_children(list_item)
 
 
     class MultiLineInput(ChildComponent):
