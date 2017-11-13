@@ -28,15 +28,15 @@ class Component(ArrayType):
         return self
 
     def _add_props(self, props: dict, append=False):
+        if self.json.get('props') is None:
+            self.json['props'] = {}
         for property_key, property_value in props.items():
             if append:
                 self.json['props'][property_key].append(property_value)
             elif isinstance(property_value, dict) and len(property_value):
                 for key, value in property_value.items():
-                    self.json['props'][property_key][key] = value
+                    self.json['props'][property_key] = {key: value}
             else:
-                if self.json.get('props') is None:
-                    self.json['props'] = {}
                 self.json['props'][property_key] = property_value
 
         return self
