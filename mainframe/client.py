@@ -25,10 +25,8 @@ class Client(object):
          """
         data = {'conversation_id': conversation_id, "message": message}
 
-        # if ($message instanceof UIPayload){
-        # $json["data"] = $message->toArray();
-        # }else{
-        # }
+        # if message instanceof UIPayload){
+        # self.json["data"] = message.get();
 
         if subscription_id is not None:
             data['subscription_id'] = subscription_id
@@ -56,11 +54,11 @@ class Client(object):
 
         return self._make_call('edit_subscription', data)
 
-    def delete_subscription(self, subscription_token, label, message=None):
+    def delete_subscription(self, conversation_id, subscription_id, message=None):
         """Delete a subscription"""
         data = {
-            'subscription_token': subscription_token,
-            'label': label,
+            'conversation_id': conversation_id,
+            'subscription_id': subscription_id,
         }
 
         if message is not None:

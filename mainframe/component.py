@@ -7,12 +7,12 @@ class Component(ArrayType):
         super().__init__()
         self.can_have_children = False
         self.must_have_children = False
-        self.type = ''
-        self.props = {}
+        self.json['type'] = ''
+        self.json['props'] = {}
 
     def _can_have_children(self):
         self.can_have_children = True
-        self.props['children'] = []
+        self.json['props']['children'] = []
 
         return self
 
@@ -23,13 +23,10 @@ class Component(ArrayType):
         return self
 
     def _set_type(self, component_type):
-        self.type = component_type
-
+        self.json['type'] = component_type
         return self
 
     def _add_props(self, props: dict, append=False):
-        if self.json.get('props') is None:
-            self.json['props'] = {}
         for property_key, property_value in props.items():
             if append:
                 self.json['props'][property_key].append(property_value)
@@ -42,13 +39,13 @@ class Component(ArrayType):
         return self
 
     def _get_prop(self, prop):
-        return self.json.get(prop)
+        return self.json['props'].get(prop)
 
     def add_children(self, component):
         if self.can_have_children:
             if isinstance(component, Component):
-                self._add_props({'children': component.get()})
+                self._add_props({'children': component.get()}, True)
             else:
-                self._add_props({'children': component})
+                self._add_props({'children': component}, True)
 
         return self

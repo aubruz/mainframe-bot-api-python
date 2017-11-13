@@ -4,7 +4,7 @@ from setuptools import find_packages
 
 setup(
     name="mainframe-bot-api",
-    version="1.1.13",
+    version="1.2.0",
     author="aubruz",
     author_email="aubruz@hotmail.com",
     packages=find_packages(),
@@ -21,9 +21,6 @@ setup(
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
         'License :: OSI Approved :: MIT License',
-
-        # Specify the Python versions you support here. In particular, ensure
-        # that you indicate whether you support Python 2, Python 3 or both.
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',

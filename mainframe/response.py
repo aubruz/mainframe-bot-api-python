@@ -14,7 +14,7 @@ class UIPayload(ArrayType):
         return self
 
     def set_render(self, component):
-        self.json['render'].append(component.get())
+        self.json['render'] = component.get()
 
         return self
 
@@ -27,7 +27,7 @@ class AuthenticationData(ArrayType):
         self.json['type'] = 'authentication'
 
     def add_payload(self, payload):
-        self.json['payload'] = payload.get()
+        self.json['payload'] = payload
 
         return self
 
