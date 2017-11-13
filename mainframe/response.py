@@ -27,7 +27,7 @@ class AuthenticationData(ArrayType):
         self.json['type'] = 'authentication'
 
     def add_payload(self, payload):
-        self.json['payload'] = payload
+        self.json['payload'] = payload.get()
 
         return self
 
@@ -45,7 +45,7 @@ class BotResponse(ArrayType):
         self.json['message'] = message
 
     def add_data(self, data):
-        self.json['data'] = data
+        self.json['data'] = data.get()
 
 
 class EmbedData(ArrayType):
@@ -68,7 +68,7 @@ class ModalData(ArrayType):
         self.json['type'] = 'modal'
 
     def set_ui(self, ui_payload: UIPayload):
-        self.json['components'] = ui_payload.get()
+        self.json['ui'] = ui_payload.get()
 
         return self
 
