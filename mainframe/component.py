@@ -43,6 +43,14 @@ class Component(ArrayType):
     def _get_prop(self, prop):
         return self.json['props'].get(prop)
 
+    def _add_payload(self, payload):
+        if self.json['props'].get('payload') is not None and isinstance(self.json['props']['payload'], dict):
+            self.json['props']['payload'].update(payload)
+        else:
+            self.json['props']['payload'] = payload
+
+        return self
+
     def add_children(self, component):
         if self.can_have_children:
             if isinstance(component, Component):

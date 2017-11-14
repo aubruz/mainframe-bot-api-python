@@ -15,7 +15,7 @@ class Form(RootComponent):
         self._must_have_children()
 
     def add_payload(self, payload):
-        return self._add_props({'payload': payload})
+        return super()._add_payload(payload)
 
     def add_data(self, key, value):
         return self._add_props({'data': {key: value}})
