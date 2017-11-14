@@ -63,10 +63,10 @@ class ListItem(ChildComponent):
         #    throw new UIException('The type of a ListItem must be either "copy_url", "open_url", "open_modal", "message_embed" or "post_payload"!')
         return self._add_props({"type": list_type})
 
-    def set_payload(self, payload):
+    def add_payload(self, payload):
         # if(!in_array(self.getProp("type"), ["open_modal", "message_embed", "post_payload"])) {
         #    throw new UIException('To set a payload, the type of the ListItem must be either "open_modal", "message_embed" or "post_payload"!')
-        return self._add_props({"payload": payload})
+        return self._add_payload(payload)
 
     def set_url(self, url):
         # if(!in_array(self.getProp("type"), ["copy_url", "open_url"])) {
