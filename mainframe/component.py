@@ -29,6 +29,8 @@ class Component(ArrayType):
     def _add_props(self, props: dict, append=False):
         for property_key, property_value in props.items():
             if append:
+                if self.json['props'].get(property_key) is None:
+                    self.json['props'][property_key] = []
                 self.json['props'][property_key].append(property_value)
             elif isinstance(property_value, dict) and len(property_value):
                 for key, value in property_value.items():
