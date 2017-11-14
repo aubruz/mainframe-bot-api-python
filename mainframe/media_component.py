@@ -76,7 +76,7 @@ class MediaGallery(ChildComponent):
 
     def add_children(self, component):
         if isinstance(component, MediaItem):
-            return self.add_children(component)
+            return super().add_children(component)
         # throw new UIException("Child of MediaGallery can only be a MediaItem")
 
 
