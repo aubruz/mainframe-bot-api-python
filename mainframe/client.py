@@ -1,6 +1,8 @@
 import requests
 import json
 
+from mainframe import UIPayload
+
 
 class Client(object):
     """Class that handles calls to and responses from Mainframe API
@@ -25,8 +27,8 @@ class Client(object):
          """
         data = {'conversation_id': conversation_id, "message": message}
 
-        # if message instanceof UIPayload){
-        # self.json["data"] = message.get();
+        if isinstance(message, UIPayload):
+            data["data"] = message.get()
 
         if subscription_id is not None:
             data['subscription_id'] = subscription_id
