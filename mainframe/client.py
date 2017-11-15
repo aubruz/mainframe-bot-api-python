@@ -1,7 +1,7 @@
 import requests
 import json
 
-from mainframe import UIPayload
+from mainframe.response import UIPayload
 
 
 class Client(object):
@@ -25,10 +25,12 @@ class Client(object):
         is relevant to the conversation. While it is possible for the bot to send messages without a
         subscription_id, these messages might be rate-limited or even disabled to prevent abuse.
          """
-        data = {'conversation_id': conversation_id, "message": message}
+        data = {'conversation_id': conversation_id}
 
         if isinstance(message, UIPayload):
             data["data"] = message.get()
+        else:
+            data["message"] = message
 
         if subscription_id is not None:
             data['subscription_id'] = subscription_id

@@ -5,12 +5,12 @@ from mainframe.component import Component
 from mainframe.child_component import ChildComponent
 from mainframe.button_component import UIButton, ModalButton, MessageButton, MenuButton
 from mainframe.text_component import (Text, TextButton, TextHighlight, TextInput,
-                                                 TextLink, TextStyle, TextSubtle)
+                                      TextLink, TextStyle, TextSubtle)
 from mainframe.root_component import RootComponent, Form, Dialog, TextMessage, Message
 from mainframe.form_component import (ListItem, ListComponent, RadioButtonSelect, Dropdown,
-                                                 CheckboxItem, CheckboxGroup, MultiSelect)
+                                      CheckboxItem, CheckboxGroup, MultiSelect)
 from mainframe.media_component import (MediaItem, MediaGallery, Image, IconTextGroup, LinkPreview,
-                                                  VideoLinkPreview, Author, AvatarList)
+                                       VideoLinkPreview, Author, AvatarList)
 
 __all__ = [
     'Client', 'ArrayType', 'AuthenticationData', 'BotResponse',
