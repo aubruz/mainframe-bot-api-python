@@ -41,11 +41,17 @@ class BotResponse(ArrayType):
     def set_success(self, success):
         self.json['success'] = success
 
+        return self
+
     def add_message(self, message):
         self.json['message'] = message
 
+        return self
+
     def add_data(self, data):
         self.json['data'] = data.get()
+
+        return self
 
 
 class EmbedData(ArrayType):

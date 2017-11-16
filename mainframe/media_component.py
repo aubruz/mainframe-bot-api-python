@@ -154,7 +154,7 @@ class IconTextGroup(ChildComponent):
         return self._add_props({"secondaryText": text})
 
     def set_image_url(self, url):
-        self._add_props({"imageUrl": url})
+        return self._add_props({"imageUrl": url})
 
 
 class LinkPreview(ChildComponent):
