@@ -53,7 +53,7 @@ client.delete_subscription(conversation_id, subscription_id, message)
 The mainframe-bot-api package uses requests to perform the api calls.
 
 ```
-response = Client.setup_subscription(subscription_token, label);
+response = Client.setup_subscription(subscription_token, label)
 
 if response.status_code == 200:
     // Do something
